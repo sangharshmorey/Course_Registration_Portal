@@ -1,0 +1,1 @@
+a'); drop table sql_injection_dummy --

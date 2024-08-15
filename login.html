@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            width: 450px;
+            background-color: #fff;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Added styles for enum alignment */
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div label {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="logincheck" method="POST">
+        <div>
+            <label for="role">Role:</label>
+            <input type="radio" id="student" name="role" value="student" checked>
+            <label for="student">Student</label>
+            <input type="radio" id="instructor" name="role" value="instructor">
+            <label for="instructor">Instructor</label>
+            <input type="radio" id="admin" name="role" value="admin">
+            <label for="admin">Admin</label>
+        </div>
+
+        <label for="userid">User ID:</label>
+        <input type="text" id="userid" name="userid" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+      <button type="submit" id="login"> Login </button>
+    </form>
+</body>
+
+</html>
+
+
